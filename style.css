@@ -379,6 +379,13 @@ th{color:#c0c0c0;font-weight:500;}
   gap:8px;
   flex-wrap:wrap;
 }
+#device-type-switch {
+  display: none;
+}
+
+#device-type-switch[data-visible="true"] {
+  display: flex; 
+}
 .dev-tab-btn{
   background:#050805;
   border:1px solid var(--green);

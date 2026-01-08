@@ -136,7 +136,10 @@
   const tabModsBtn  = qs('.tab[data-tab="mods"]');
   const closeBtn    = qs("#closeModal");
   const clearBtn    = qs("#clearAll");
-
+  const deviceTypeSwitch = document.getElementById("device-type-switch");
+  if (deviceTypeSwitch) {
+  deviceTypeSwitch.dataset.visible = "false";
+  }
   const cart = new Map();
 
   const universalSlots = [null, null];
@@ -951,6 +954,9 @@ function openModalFor(section){
     }
     extDevices.delete(extId);
     switchDeviceTab("main");
+    if (deviceTypeSwitch && extDevices.size === 1) {
+    deviceTypeSwitch.dataset.visible = "true";
+    }
   }
 
   function createExtTab(mod){
@@ -1078,6 +1084,9 @@ function openModalFor(section){
 
     // підключаємо лісенери для нових "+"
     attachEvents();
+    if (deviceTypeSwitch && extDevices.size === 0) {
+  deviceTypeSwitch.dataset.visible = "false";
+  }
   }
 
 function attachEvents(){
