@@ -1,1 +1,0 @@
-# Nova_S_LTE_Culc.github.io
