@@ -367,7 +367,15 @@ th{color:#c0c0c0;font-weight:500;}
   cursor:not-allowed;
   pointer-events:none;
 }
-
+.card.conflict::after {
+  content: "Несумісно";
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #aaa;
+}
 
 /* Device tabs (main device / extenders) */
 .device-tabs{
